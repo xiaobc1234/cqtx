@@ -1,0 +1,111 @@
+{
+   "style" : "default",
+   "config" : "save_cqtx.dat",
+   "width" : 640,
+   "height" : 760,
+   "cancelname" : "取消",
+   "okname" : "确定",
+   "views" : [
+      {
+         "align" : "center",
+         "color" : "0,0,0",
+         "size" : "30",
+         "text" : "冰尘脚本",
+         "type" : "Label"
+      },
+			{
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "size" : "20",
+	      "text" : "作者QQ：527710279",
+	      "type" : "Label"
+      },
+			{
+	      "align" : "left",
+	      "color" : "0,0,0",
+	      "size" : "20",
+	      "text" : "讨论QQ群：345010285",
+	      "type" : "Label"
+      },
+      {
+         "align" : "left",
+         "color" : "0,0,0",
+         "size" : "20",
+         "text" : "账号角色数:",
+         "type" : "Label"
+      },
+      {
+         "id" : "账号角色数",
+         "list" : "1,2,3,4",
+         "select" : "1",
+         "size" : "20",
+         "type" : "RadioGroup",
+         "orientation" : "horizontal"
+      },
+      {
+         "id" : "auto",
+         "list" : "每日必做(全)",
+         "select" : "0",
+         "size" : "20",
+         "type" : "CheckBoxGroup",
+         "orientation" : "horizontal"
+      },
+      {
+         "id" : "膜拜城主",
+         "list" : "城主不膜拜,城主膜拜",
+         "select" : "1",
+         "size" : "20",
+         "type" : "RadioGroup",
+         "orientation" : "horizontal"
+      },
+			{
+         "id" : "通天塔几层结束",
+         "list" : "通天塔九层,通天塔十层,通天塔通关",
+         "select" : "0",
+         "size" : "20",
+         "type" : "RadioGroup",
+         "orientation" : "horizontal"
+      },
+//      {
+//         "id" : "降妖除魔和通天塔",
+//         "list" : "降妖除魔和通天塔",
+//         "select" : "0",
+//         "size" : "20",
+//         "type" : "CheckBoxGroup",
+//         "orientation" : "horizontal"
+//      },
+			
+			{
+         "id" : "ta",
+         "list" : "通天塔only",
+         "select" : "0",
+         "size" : "20",
+         "type" : "CheckBoxGroup",
+         "orientation" : "horizontal"
+      },
+      {
+         "id" : "未知暗殿刷boss",
+         "list" : "未知暗殿刷boss",
+         "select" : "0",
+         "size" : "20",
+         "type" : "CheckBoxGroup",
+         "orientation" : "horizontal"
+      },
+			{
+         "id" : "to60",
+         "list" : "主线任务到达60级",
+         "select" : "0",
+         "size" : "20",
+         "type" : "CheckBoxGroup",
+         "orientation" : "horizontal"
+      },
+			{
+         "id" : "random",
+         "list" : "挂机遇传送自动随机",
+         "select" : "0",
+         "size" : "20",
+         "type" : "CheckBoxGroup",
+         "orientation" : "horizontal"
+      }
+   ]
+}
