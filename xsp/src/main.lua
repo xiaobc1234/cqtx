@@ -3,6 +3,8 @@ require "DataStream"
 require "DataStreamHouse"
 require "random/DataStream"
 
+require "httpUtil/httpUtil"
+
 
 
 function main()
@@ -193,11 +195,43 @@ end
 
 
 -- -----------------------只做通天塔---------------------------
-function taOnly()
+function taOnly(role)
+
+--没有角色就默认第一个角色
+  if not role then 
+    role =1
+  end
+  
+  --全局变量定义区
+  openHreo = false;--是否召唤了战神,true表示召唤了战神
+  
+  showTip("欢迎使用冰尘脚本!")
+  
+  登录()
+  sysLog("role："..role)
+  选择角色进入游戏(role)
+  for i=1,2 do
+    mSleep(1000)
+    领取离线奖励()
+  end
+	
 	for i=1,2 do
 		通天塔是否左移了一段距离 =false;
     通天塔Only()
   end
+	
+	返回登录界面()
+	
+  local roleTmp = role+1
+  if roleTmp <=roleCount then
+    taOnly(roleTmp)
+  end
+	
+	--切换账号
+	if currentAccount==1 then
+		currentAccount=currentAccount+1
+		changeAcount(降妖除魔和通天塔,1)
+	end
 	
 end
 
@@ -217,6 +251,51 @@ function changeAcount(excuteMethod,excutePar)
 	
 end
 
+-- -----------------------80级、三转、五转后自动个人boss---------------------------
+function boss5(role)
+	
+	--没有角色就默认第一个角色
+  if not role then 
+    role =1
+  end
+  
+  --全局变量定义区
+  openHreo = false;--是否召唤了战神,true表示召唤了战神
+  
+	个人火龙=1--个人火龙一次
+	个人魔龙=1--个人魔龙一次
+	个人牛魔=1--个人牛魔一次
+	
+  showTip("欢迎使用冰尘脚本!")
+  
+  登录()
+  sysLog("role："..role)
+  选择角色进入游戏(role)
+  for i=1,2 do
+    mSleep(1000)
+    领取离线奖励()
+  end
+	
+	for i=1,3 do
+			
+			经验BOSS()
+	end
+	
+	
+	返回登录界面()
+	
+  local roleTmp = role+1
+  if roleTmp <=roleCount then
+    降妖除魔和通天塔(roleTmp)
+  end
+	
+	--切换账号
+	if currentAccount==1 then
+		currentAccount=currentAccount+1
+		changeAcount(降妖除魔和通天塔,1)
+	end
+	
+end
 
 
 
