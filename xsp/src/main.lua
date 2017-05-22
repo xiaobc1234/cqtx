@@ -94,7 +94,7 @@ function autoFB(role)
   end
   
 	--喝酒3次，最后一次领牌子用 喝三次就够了，因为一次会点击很多次
-  for i=1,3 do
+  for i=1,5 do
 --    喝酒()
 		快捷喝酒()
   end

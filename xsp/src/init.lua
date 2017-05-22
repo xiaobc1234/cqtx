@@ -4,7 +4,7 @@ require "DeviceCheck"
 function b_init()
   
   --定义一些全局的变量
-  _debug = false--定义全局debug模式
+  _debug = true--定义全局debug模式
 	_isPhone=true--是否手机，false为模拟器  会出现部分共能出不来的情况，做兼容
 	通天塔是否左移了一段距离=false--是否已经左移一段距离
 	delay=0
